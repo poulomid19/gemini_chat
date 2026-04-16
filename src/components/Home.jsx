@@ -17,7 +17,7 @@ const Home = () => {
         setText("")
 
      try {
-        const res = await axios.post("http://localhost:3000/api/message",{
+        const res = await axios.post("https://gemini-chat-tis5.onrender.com/api/message",{
             convoId: userId,
             role:"User",
             content: text
