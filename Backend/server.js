@@ -6,7 +6,9 @@ const route = require("./routes/route")
 app.use(express.json())
 
 const cors = require("cors")
-app.use(cors())
+app.use(cors({
+  origin: "https://gemini-chat-sandy.vercel.app/"
+}));
 const dotenv = require("dotenv")
 dotenv.config()
 mongoose.connect(process.env.MONGO_URI)
